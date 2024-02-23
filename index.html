@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星座旅行指南</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>星座旅行指南</h1>
+        <input type="text" id="starSign" placeholder="请输入你的星座">
+        <button onclick="explore()">探索</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function explore() {
+            var starSign = document.getElementById("starSign").value;
+            var destination;
+            var recommendation;
+            
+            switch(starSign) {
+                case "白羊座":
+                    destination = "西藏";
+                    recommendation = "白羊座的人充满了活力和冒险精神，西藏作为中国的青藏高原，有着壮丽的自然风光和神秘的藏传佛教文化，是白羊座的理想旅行目的地。";
+                    break;
+                case "金牛座":
+                    destination = "云南";
+                    recommendation = "金牛座的人喜爱舒适和美食，而云南以其优美的自然风光和丰富的民族文化而闻名，是金牛座的理想旅行目的地。";
+                    break;
+                case "双子座":
+                    destination = "上海";
+                    recommendation = "双子座的人好奇心强，喜欢新鲜事物和城市生活，上海作为中国的国际大都市，有着繁华的城市风光和多元的文化氛围，是双子座的理想旅行目的地。";
+                    break;
+                case "巨蟹座":
+                    destination = "青岛";
+                    recommendation = "巨蟹座的人温柔敏感，喜欢海边的浪漫氛围，青岛以其优美的海滨风光和丰富的海鲜美食而闻名，是巨蟹座的理想旅行目的地。";
+                    break;
+                case "狮子座":
+                    destination = "北京";
+                    recommendation = "狮子座的人自信阳光，喜欢热闹繁华的氛围，北京作为中国的首都，有着悠久的历史和丰富的文化底蕴，是狮子座的理想旅行目的地。";
+                    break;
+                case "处女座":
+                    destination = "西安";
+                    recommendation = "处女座的人理性细腻，喜欢历史文化和艺术，西安作为中国的古都，有着丰富的历史遗迹和独特的文化氛围，是处女座的理想旅行目的地。";
+                    break;
+                case "天秤座":
+                    destination = "杭州";
+                    recommendation = "天秤座的人喜爱和谐美好的环境，而杭州作为中国的“人间天堂”，以其秀丽的自然风光和富有文化底蕴而闻名，是天秤座的理想旅行目的地。";
+                    break;
+                case "天蝎座":
+                    destination = "张家界";
+                    recommendation = "天蝎座的人独立坚强，喜欢神秘和挑战，张家界以其壮丽的自然风光和独特的地貌景观而闻名，是天蝎座的理想旅行目的地。";
+                    break;
+                case "射手座":
+                    destination = "西藏";
+                    recommendation = "射手座的人热爱自由和探险，而西藏作为中国的青藏高原，有着广袤的原野和壮美的自然风光，是射手座的理想旅行目的地。";
+                    break;
+                case "摩羯座":
+                    destination = "长城";
+                    recommendation = "摩羯座的人脚踏实地，喜欢历史和传统，长城作为中国的标志性建筑，有着悠久的历史和壮丽的景观，是摩羯座的理想旅行目的地。";
+                    break;
+                case "水瓶座":
+                    destination = "西双版纳";
+                    recommendation = "水瓶座的人独立思考，喜欢追求新奇与刺激，西双版纳以其热带雨林和丰富的民族文化而闻名，是水瓶座的理想旅行目的地。";
+                    break;
+                case "双鱼座":
+                    destination = "厦门";
+                    recommendation = "双鱼座的人浪漫敏感，喜欢艺术和文学，厦门以其优美的海滨风光和浓厚的文化氛围而闻名，是双鱼座的理想旅行目的地。";
+                    break;					
+                // 其他星座的case...
+                default:
+                    destination = "未知";
+                    recommendation = "抱歉，暂时无法为您推荐旅行目的地。";
+            }
+
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = "<h2>推荐目的地：" + destination + "</h2><p>" + recommendation + "</p>";
+        }
+    </script>
+</body>
+</html>
